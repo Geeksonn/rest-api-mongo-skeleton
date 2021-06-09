@@ -6,15 +6,21 @@ This simple skeleton aims to provide a very basic server that retrieves, creates
 
 # Steps 
 
+## Prerequisites
+
+This small tutorial expects you to already have `nodeJS` installed. 
+
 ## Init the server part
 
-Install express and create a `server.js` source. To install express: 
+Init a npm project with the command `npm init`.
+Then, install the needed depedencies: express, cors and mongodb. To do so, type the following command 
 `npm install express cors mongodb`
-The `server.js` source should contain all configuration related to the server (e.g., use of middelwares).
+
+Then, create a first file, `server.js`, that will contain all configuration related to the server (e.g., use of middelwares).
 
 ## Init the DAO part
 
-Then, create a `.env` file to setup the MongoDB URI and database.
+First, create an util source file: `util/mongodb.js`. This will contain the connection to mongodb and use caching system to avoid creating unnecessary additional connections. This source needs a `.env` file with the MongoDB URI and DB name. 
 Then, create a folder `dao` and, inside, a `postsDAO.js` file. 
 
 ## Controller & route part
@@ -30,7 +36,7 @@ Inside `server.js`, add a line `server.use()` for each route we have. In our cas
 
 ## Finish with index.js
 
-Inside the main source, `index.js`, we need to connect to the MongoDB server and, if successful, inject the connections the the DAOs and start the server. 
+Inside the main source, `index.js`, we just need to start listening on the correct port. 
 
 ## That's it !
 

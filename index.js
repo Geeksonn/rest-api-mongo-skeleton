@@ -8,6 +8,8 @@ const port = 3001;
 const MongoClient = mongodb.default.MongoClient;
 dotenv.config();
 
+/*
+
 MongoClient.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => {
         console.error(err.stack);
@@ -20,3 +22,8 @@ MongoClient.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTo
             console.log('Server is running on port ' + port);        
         })
     });
+    */
+
+server.listen(port, () => {
+    console.log('Server is running on port ' + port);
+})
