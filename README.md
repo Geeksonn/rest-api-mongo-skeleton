@@ -42,3 +42,7 @@ Inside the main source, `index.js`, we just need to start listening on the corre
 
 That's it ! We have a server running and connected to MongoDB. 
 To test it, go to http://localhost:3001/api/v1/posts
+
+## What's next
+
+To go further, we need to implement new routes (inside `posts.route.js`) and their controller methods (inside `posts.controller.js`) along with the required DAO methods (inside `postsDAO.js`). 
